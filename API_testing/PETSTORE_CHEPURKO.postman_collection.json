@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "3dc2dba3-c3f0-468a-a684-edbcd6836f09",
+		"_postman_id": "85d473cf-7596-476d-b467-3d8d9f9e58f6",
 		"name": "PETSTORE_CHEPURKO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29414548",
-		"_collection_link": "https://universal-sunset-813726.postman.co/workspace/23c4fd03-11cd-4387-a98a-c5341d39527e/collection/29414548-3dc2dba3-c3f0-468a-a684-edbcd6836f09?action=share&source=collection_link&creator=29414548"
+		"_exporter_id": "3475032"
 	},
 	"item": [
 		{
@@ -143,6 +142,13 @@
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {\r",
 							"    pm.response.to.have.status(405);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(405);\r",
+							"    pm.expect(jsonData.message).to.eql(\"no data\");\r",
+							"\r",
 							"});"
 						],
 						"type": "text/javascript"
